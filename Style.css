@@ -1,0 +1,44 @@
+
+p { 
+    background-color: purple;
+    color: fuchsia;
+    font-family: 'Times New Roman';
+    /*text-align: center;*/
+}
+
+/* The 2nd header will have the below describe style */
+h1{
+    color: darkgreen;
+    font-family: fantasy;
+    text-align: center;
+    font-size: 2cm;
+}
+
+h2 {
+    color: green;
+    font-family: fantasy;
+    
+}
+
+body {
+    background-color: paleturquoise;
+    font-family: Arial;
+
+    
+}
+ ul {
+    
+    background-color: silver;
+    color: rebeccapurple;
+        
+}
+
+li{
+    text-justify: auto;
+}
+img {
+          
+    height: 4cm;
+    width: 10%;
+    border-radius: 50%;
+}

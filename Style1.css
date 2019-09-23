@@ -1,0 +1,47 @@
+
+body {
+    background-color: #ffff99;
+ 
+}
+ 
+h1 {
+ font-family: Impact;
+ font-size: 50px;
+ color: #ff6600;
+ padding: 20px;
+ border: 3px #ff6600 solid;
+  
+}
+ 
+ 
+h2 {
+ font-family: 'Courier New';
+ background-color: #ff6600;
+ color:#ffff99;
+ padding: 20px;
+ margin: 10px;
+}
+ 
+ol {
+    background-color: #ffcc00;
+    padding: 20px; 
+  /*  line-height: 30px;*/
+    
+    
+ 
+}
+ 
+li {
+    color: #ffff99;
+    font-family: 'Courier New';
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 10px;
+}
+ 
+p {
+ padding: 20px;
+ border: 2px #ffcc00 dashed;
+ font-family: Helvetica;
+ font-weight: normal;
+}
