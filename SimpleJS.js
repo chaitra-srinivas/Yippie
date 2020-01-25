@@ -7,6 +7,7 @@ function onLoad() {
     document.getElementById("name").onblur = nameOnblur;
     document.getElementById("basic").onkeyup = addSalary;
     document.getElementById("perks").onkeyup = addSalary;
+    document.getElementById("date").onclick = dateClick;
 }
 
 function saveClick() {
@@ -14,8 +15,12 @@ function saveClick() {
     alert(textValue);
 }
 
+function increaseSalary(p) {
+    alert(p);
+}
+
 function nameKeyup() {
-    var textValue = document.getElementById("name").value;
+    let textValue = document.getElementById("name").value;
     document.getElementById("nameValue").innerText = textValue;
 }
 
@@ -23,16 +28,25 @@ function nameOnblur() {
     document.getElementById("nameValue").innerText = "abcd";
 }
 
+function dateClick(){
+    
+    let curDate = new Date();
+    let tomorrowsDate = new Date();
+    tomorrowsDate.setDate(curDate.getDate() + 1);
+    document.getElementById("dayValue").innerText = tomorrowsDate.toDateString();
+}
+
 function addSalary(){
    
-   var basicSalary = document.getElementById("basic").value;
-   var perksSalary = document.getElementById("perks").value;
-
-   var basicSalaryInt = parseInt(basicSalary);
-   var perksSalaryInt = parseInt(perksSalary);
-
-   var isSalaryNaN = isNaN(basicSalaryInt) || isNaN(perksSalaryInt);
-   var totalSalary = isSalaryNaN ? "" : basicSalaryInt + perksSalaryInt;
-
-   document.getElementById("totalSalary").value = totalSalary;
-}
+    let basicSalary = document.getElementById("basic").value;
+    let perksSalary = document.getElementById("perks").value;
+ 
+    let basicSalaryInt = parseFloat(basicSalary);
+    let perksSalaryInt = parseFloat(perksSalary);
+ 
+    let isSalaryNaN = isNaN(basicSalaryInt) || isNaN(perksSalaryInt);
+    let totalSalary = isSalaryNaN ? "" : basicSalaryInt + perksSalaryInt;
+ 
+    document.getElementById("totalSalary").value = totalSalary;
+ }
+ 
