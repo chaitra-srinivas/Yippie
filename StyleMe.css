@@ -1,12 +1,30 @@
 h1{
-    background-color: #96708d;
+    background-color: #ebe2e9;
     color:#42123e;
     font-family: Georgia;
     text-align: center;
     padding: 10px;
-    border-radius:5%
+    border-radius:5%;
+    margin-top: 0cm;
    /* border: 3px hsl(239, 98%, 51%) solid;*/
 }
+
+body #Education h2:hover {
+    
+    background-color: rgb(43, 25, 206);
+    text-decoration: underline;
+}
+
+#Education h4{
+    background-color: #43e;
+    padding: 4px;
+
+}
+
+h2{
+    text-decoration: underline;
+}
+
 body{
     background-color: rgb(212, 191, 191);
 }
@@ -21,28 +39,42 @@ p{
     font-size: 1 em;
     font-weight: 100%;
     border: 2px #292301 dashed;
-    background-color: #96708d;
+    background-color: #ebe2e9;
     color: #42123e;
 } 
 img{
     border-radius: 50%;
+    padding: 3px;
+    margin-left: 20%;
 
 }
-h3{background-color:#96708d;
+
+h3{background-color:#ebe2e9;
+    text-decoration: underline;
     color: #42123e;
     font-family: Georgia;
     padding: 10px;
-    border: 3px #292301 solid
+    border: 3px #292301 solid;
 
 }
 
+ .Favourites h3 {
+    background-color:#ebe2e9;
+    color: #42123e;
+    font-family: Georgia;
+    padding: 10px;
+    border: none;
+}
+
 ul{
+    background-color: #ebe2e9;
     border: 2px #292301 dashed;
     margin: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 ol{
+    background-color: #ebe2e9;
     border: 2px #292301 dashed;
     margin: 10px;
     padding-top: 10px;
@@ -50,6 +82,36 @@ ol{
 }
 
 li{
+    
     font-family: Arial;
     color: #42123e;
 }
+#Education{
+    background-color: #ebe2e9;
+    border:2px #292301 solid;
+}
+
+.Favourites{
+    border: 2px #292301 solid;
+    background-color: #ebe2e9;
+}
+
+#Experience{
+    border: 2px #292301 solid;
+    background-color: #ebe2e9;
+    padding: 2px
+   }
+
+  footer p:hover {
+      background-color: #42123e;
+     
+   }
+
+   #Experience:hover {
+    background-color: #FF4566;
+
+}
+
+#Experience h2:focus{
+       background-color: #FF4566;
+   }
