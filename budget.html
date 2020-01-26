@@ -1,0 +1,61 @@
+<!DOCTYPE hmtl>
+<html>
+
+<head>
+    <meta charset="UT-8">
+    <title>Budget</title>
+    <link rel="stylesheet" href="CSS/budgetStyle.css">
+    <script lang="javascript" src="JS/budgetScript.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Budgeting <small class="text-muted">made easy!</small></h1>
+        <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus ac augue vel hendrerit. Morbi vitae
+            ornare
+            eros. Etiam viverra nulla eu feugiat ultricies. Suspendisse eleifend mi eget gravida ornare. Ut dui tellus,
+            cursus
+            sed mi vel, hendrerit tincidunt tellus. Fusce id molestie tortor. Duis maximus lorem eleifend, mollis nisi
+            quis,
+            pharetra diam. Donec pellentesque lectus consectetur nisl sodales, vel suscipit est aliquet. Fusce sagittis
+            eu nibh
+            et aliquet. Donec auctor semper metus, in lobortis est gravida eget.
+        </p>
+        <div class="row">
+            <div class="col-4">
+                <form>
+                    <div class="form-group">
+                        <label for="budgetCategory">Category</label>
+                        <input type="text" class="form-control" id="budgetCategory"
+                            aria-describedby="budgetCategoryHelp">
+                        <small id="budgetCategoryHelp" class="form-text text-muted">What rough category does this
+                            expense lie in ?</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="budgetAmount">Amount</label>
+                        <input type="number" class="form-control" id="budgetAmount" aria-describedby="budgetAmountHelp">
+                        <small id="budgetAmountHelp" class="form-text text-muted">How much do you intend to budget for
+                            ?</small>
+                    </div>
+                    <button type="button" id="saveBudget" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+                <table class="table" id="budgetItemsTable">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Amount</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+</body>
+
+</html>
