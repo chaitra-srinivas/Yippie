@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Array exercises
+    </title>
+    Javascript Arrays and Objects!
+</head>
+
+<body>
+
+    <script>
+
+        // Defining objects
+        var bob = {
+             age: 30
+             , hair: "blonde"
+             , eyes: "blue"
+             , work: "developer"
+              };
+        var jen = {
+            age: 28,
+            hair: "brown",
+            eyes: "green",
+            work: "teacher"
+        };
+        var adam = {
+            age: 45,
+            hair: "black",
+            eyes: "brown",
+            work: "doctor"
+        };
+
+        // Objects within objects
+        var friends = {friend1: bob, friend2: jen, friend3: adam};
+        // An array of objects
+        var arrFriend = [bob, jen];
+
+
+        // Updating object values
+        friends.friend1.age = 40;
+        friends.friend2.hair = "red";
+
+
+        // Retrieving and printing information onto the console
+        console.log("Bob works as a " + friends.friend1.work);
+        console.log("Bob is " + arrFriend[0].age + " years old");
+        console.log("Jen's hair color is " + arrFriend[1].hair);
+
+        
+
+
+    </script>
+</body>
+
+</html>
