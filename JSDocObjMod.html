@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Javascript Document Object Model
+    </title>
+</head>
+<body>
+    <div id = "output">Hello World</div>
+    <input type = "text" id="val">
+    <script>
+    //Accessing the document title and the document type
+
+    var titleText = document.title; 
+        console.log(titleText + "Document Type is: " + document.doctype);
+
+// Dynamic DOM
+ 
+   var displayOutput = document.getElementById("output");
+   displayOutput.innerHTML = "Welcome to my page!!";
+  
+    
+// Input text 
+
+ var val = document.getElementById("val");
+ var output = document.getElementById("output");
+ val.value = output.innerHTML;
+
+// Dynamic input values
+  
+var response = prompt("Hello, what is your name?");
+val.value = response;
+output.innerHTML = "Welcome to my page " + response;
+
+  
+    </script>
+</body>
+</html>
