@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <title> JS Conditional Ternary Operator </title>
+</head>
+
+<body>
+    <div id="output"> Ternary Operator </div>
+
+    <script>
+        // Using conditional ternary operator
+
+        /* An array containing usernames */
+
+        arrUserName = new Array();
+        arrUserName = ['Bob', 'Jane', 'Mary'];
+
+        var response = prompt("Who are you after?");
+
+        var isThere = arrUserName.indexOf(response) > -1 ? "User is there" : "No user";
+
+        alert(isThere);
+
+        if (isThere == "User is there") {
+
+            document.getElementById("output").innerHTML = "The user you are after "
+                + response + " is there";
+        }
+        else {
+            document.getElementById("output").innerHTML = "The user you are after "
+                + response + " is not there";
+        }
+
+
+    </script>
+</body>
+
+</html>
