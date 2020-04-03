@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <title> JS Switch case </title>
+</head>
+
+<body>
+    <h>Let's talk schedule</h1>
+    <div id="output">It's that time of the day</div>
+
+    <script>
+       
+       // Ask the user for input
+
+       var response = prompt("What are you doing?");
+       var output = document.getElementById("output");
+       var timeOfDay;
+
+        // Switch case
+
+       switch (response) {
+           case "Having my breakfast":
+            timeOfDay = "8 O'clock!";
+           break;
+           case "Having lunch":
+            timeOfDay = "12 O'clock!";
+           break;
+           case "Having tea":
+           timeOfDay = "4 O'clock!";
+           break;
+           case "Having dinner":
+           timeOfDay = "6 O'clock!";
+           break;
+           default: timeOfDay = "Time to self isolate!";
+
+       }
+
+      output.innerHTML = timeOfDay;
+      
+     </script>
+</body>
+
+</html>
