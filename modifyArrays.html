@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Array exercises
+        </title>
+        Hello, welcome to my website!
+    </head>
+    <body>
+      
+        <script>
+
+            var animals = ["Dog","Cat","Horse","Pig","Fish", "Monkey"];
+            animals.push("Sheep"); // Adds an item to the end of an array.
+            animals.pop(); // Removes the last item from the array.
+            animals.sort(); // sorts the items of the array in alphabetical order
+            animals.reverse(); // sorts the items of the array in reverse alphabetical order
+            animals.shift(); // Removes first item from the array
+            animals.unshift("Pig"); //Adds the first item to the array list
+            animals.splice(2,2); //Removes from specified number of items from the specified pos
+          //  animals[20] = "Snake";
+          console.log(animals);
+
+           
+           var newHolder = ["cat","dog","rabbit","bird"];
+           newHolder.length = 11;
+           newHolder.shift();
+           newHolder.pop();
+         
+           newHolder.unshift("Horse");
+            newHolder.fill("fish",1,7);
+            newHolder[7] = "rabbit";
+            newHolder[8] = "dog";
+            newHolder[9] = "sheep";
+
+            console.log(newHolder);
+           
+
+          
+           
+        </script>
+    </body>
+</html>

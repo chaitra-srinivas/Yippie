@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Array exercises
+        </title>
+        Hello, welcome to my website!
+    </head>
+    <body>
+        <!--
+        <div>Please enter your name: </div>
+        <div><input id="name" type="text"/></div>
+        <div>Please enter your age: </div>
+        <div><input id="age" type="text"/></div>
+        <div>Please enter your address: </div>
+        <div><input id="address" type="text"/></div> -->
+
+        <!-- This accesses the JS file -->
+        <!-- <script src="JSArrays.js"></script> -->
+        <script>
+
+            /*
+            var task = ["Laundry","Groceries shopping","Cooking dinner","Learn JS","Shower"]; 
+            var progress = ["Done","WIP","To do"];
+            var question1 = prompt("Which task 1 -"+task.length+"?") ;
+            var question2 = prompt("Status 1 = Done, 2 = WIP, 3 = To do?");
+
+            console.log("Today you will  " + task[(question1-1)] + " and the status of the task is " + progress[(question2-1)] ); */
+
+            var animals = ["Dog","Cat","Horse","Pig","Fish", "Monkey"];
+            var randomIndex = Math.floor(Math.random()*animals.length);
+            var randomAnimal = animals[randomIndex];
+            var message = prompt("Which index value is " + randomAnimal + " at?");
+            var response = (message == randomIndex) ? "You nailed it!" : "Wrong. It is " +  randomIndex;
+            alert(response);
+           /* console.log(randomIndex);
+            console.log(animals[randomIndex]); */
+
+
+
+        </script>
+    </body>
+</html>

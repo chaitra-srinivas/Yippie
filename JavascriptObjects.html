@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Array exercises
+        </title>
+       Javascript Objects!
+    </head>
+    <body>
+      
+        <script>
+            var fan = {color:"White", style:"Pedestal", brand:"Heller"}; //literal 
+            console.log(fan);
+
+            var laptop = new Object();
+            laptop.color = "Silver";
+            laptop.make = "Dell";
+            
+            var car = {color:"Red",make:"Ford",door:5,model:"Mustang",driver:"Joe"};
+           // var response = prompt("What would you like to know about the car: Color, Make, Model, Doors?");
+           // alert("The car is " + car[response] + " in color");
+            
+            for(var property in car){ 
+                console.log(property + " " + car[property]);
+            }
+
+
+
+        </script>
+    </body>
+</html>

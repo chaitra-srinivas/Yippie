@@ -1,12 +1,16 @@
-window.onload = onLoad;
 let budgetItems = new Array();
 
-function onLoad() {
-    document.getElementById("saveBudget").onclick = saveBudgetClick;
+$(function() { 
+    //onload
+    wireUpEvents();
+});
+
+function wireUpEvents() {
+    $("#saveBudget").click(saveBudgetClick);
 }
 
 function displayBudgetItems() {
-    let table = document.getElementById("budgetItemsTable");
+    let table = $("#budgetItemsTable");
     let totalAmount = 0;
     clearBudgetItems(table);
 

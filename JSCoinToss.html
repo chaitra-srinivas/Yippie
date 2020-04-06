@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title> JS If Statement coin toss </title>
+</head>
+
+<body>
+    <h>Let's toss a coin</h1>
+        <div id="output">Let's see if you won the toss!</div>
+
+        <script>
+
+            // Ask the user for input
+
+            var response = prompt("What do you choose? Heads/Tails");
+            var output = document.getElementById("output");
+            // Turn the response into a numeric value
+            if (response == "Heads" || response == "heads") {
+                response = 1;
+            } else if (response == "Tails" || response == "tails") {
+                response = 0;
+            } else {
+                response = -1;
+            }
+            // Generating a random number using Math.random function. Then use round function to round it to the nearest whole number.
+            var coinToss = Math.round(Math.random());
+            
+            // Compare the user input and the randomly generated value and print response.
+
+            if (response == coinToss) {
+                output.innerHTML = "Yippie, you won the toss!";
+            }
+            else if (response == -1) {
+                output.innerHTML = "Invaid input. Please choose heads/tails";
+            }
+            else {
+                output.innerHTML = "Better luck next time.";
+            }
+
+
+        </script>
+</body>
+
+</html>

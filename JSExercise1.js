@@ -55,6 +55,6 @@ else
 }
 */
  b++;
- console.log( (a==b) ? "True" : "False");
+console.log( (a==b) ? "True" : "False");
 console.log( (a%2 == 0)? a + " is even" : a + " is odd");
 
