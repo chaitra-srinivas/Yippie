@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Rock, Paper and Scrissors - Javascript Logic Statements </title>
+</head>
+
+<body>
+    <h>Rock, Paper and Scrissors</h1>
+        <div id="output">Go ahead, make a choice!</div>
+        <div id="answer"></div>
+
+        <script>
+
+            // Ask the user for input
+
+            var response = prompt("Rock, paper or Scissors?");
+            var output = document.getElementById("output");
+            var answer = document.getElementById("answer");
+
+            // Generating a random number using Math.random function for a random response.
+            var win = "false";
+            var randomResponse = Math.random();
+
+            // Assigning values for the random number generated using Maths random function
+
+            if (randomResponse < 0.34) { randomResponse = "Rock"; }
+            else if (randomResponse < 0.67 ) { randomResponse = "Paper"; }
+            else { randomResponse = "Scissors"; }
+
+            // Extract the first character from the responses and convert to UpperCase
+
+            var playerResponse = response.charAt(0).toUpperCase();
+            var computerResponse = randomResponse.charAt(0).toUpperCase();
+
+
+            // Comparing the user's choice and the randomly generated choice
+
+            if (playerResponse == computerResponse) {
+                win = "draw";
+            } else if (playerResponse == "R" && computerResponse == "S") {
+                win = "True";
+            } else if (playerResponse == "R" && computerResponse == "P") {
+                win = "False";
+            } else if (playerResponse == "P" && computerResponse == "S") {
+                win = "False";
+            } else if (playerResponse == "P" && computerResponse == "R") {
+                win = "True";
+            } else if (playerResponse == "S" && computerResponse == "P") {
+                win = "True";
+            } else if (playerResponse == "S" && computerResponse == "R") {
+                win = "False";
+            }else{
+                win = "draw";
+            }
+
+
+            if (win == "draw") {
+                output.innerHTML = "Your choice was: " + response;
+                answer.innerHTML = "Computer chose: " + randomResponse + " Please try again";
+            } else if (win == "True") {
+                output.innerHTML = "Your choice was: " + response;
+                answer.innerHTML = "Computer chose: " + randomResponse + " Yippie! you won!";
+            } else if (win == "False") {
+                output.innerHTML = "Your choice was: " + response;
+                answer.innerHTML = "Computer chose: " + randomResponse + " Sorry, better luck next time.";
+            }
+
+
+        </script>
+</body>
+
+</html>
