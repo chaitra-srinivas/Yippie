@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Magic 8 Ball using JS Switch case </title>
+</head>
+
+<body>
+    <h>The Magic 8 ball!</h1>
+        <div id="output">Go ahead, ask a question. See what the Magic 8 ball thinks!</div>
+        <div id="answer"></div>
+
+        <script>
+
+            // Ask the user for input
+
+            var response = prompt("What do you want to know?");
+            var output = document.getElementById("output");
+            var answer = document.getElementById("answer");
+
+            // Generating a random number using Math.random function for a random response.
+
+            var randomResponse = Math.round(Math.random() * 10);
+
+            var magicPrediction = "Concentrate harder";
+
+            switch (randomResponse) {
+                case 0:
+                    magicPrediction = "Absolutely";
+                    break;
+                case 1:
+                    magicPrediction = "The likelihood is pretty high!";
+                    break;
+                case 2:
+                    magicPrediction = "Unlikely";
+                    break;
+                case 3:
+                    magicPrediction = "Very likely";
+                    break;
+                case 4:
+                    magicPrediction = "In the near future";
+                    break;
+                case 5:
+                    magicPrediction = "Impossible";
+                    break;
+                case 6:
+                    magicPrediction = "Very soon!";
+                    break;
+                case 7:
+                    magicPrediction = "Most definitely!";
+                    break;
+                case 8:
+                    magicPrediction = "Maybe a good idea";
+                    break;
+                case 9:
+                    magicPrediction = "That sounds very possible";
+                    break;
+                default:
+                    magicPrediction = "Try a different question";
+            }
+
+            // Printing the user question and the random response to the user
+
+            output.innerHTML = "Your question was: " + response;
+            answer.innerHTML = "Magic 8 ball predicts: " + magicPrediction;
+        </script>
+</body>
+
+</html>
