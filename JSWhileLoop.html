@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title> Javascript Loops - While Loop </title>
+</head>
+
+<body>
+    <h1 id="header">This is classified information</h1>
+    <div id="output">Enter only if you know the secret password<br></div>
+    <div id="answer"></div>
+
+    <script>
+
+        // Ask the user for input
+
+        var response = prompt("Guess the secret password");
+        var output = document.getElementById("output");
+        var answer = document.getElementById("answer");
+      
+        
+        //Looping untill the user guesses the correct password.
+        var passWord = "javascript";
+      
+        while (passWord != response)
+        {
+            response = prompt("Guess again!");
+          
+        }
+           
+        output.innerHTML = "Yippie, you guessed right!";
+
+
+    </script>
+</body>
+
+</html>
