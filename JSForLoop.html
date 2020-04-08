@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Javascript Loops - For Loop </title>
+</head>
+
+<body>
+    <h1 id="header">Calorie counter</h1>
+    <div id="output">Let's see how many calories you ate<br></div>
+    <div id="answer"></div>
+
+    <script>
+
+        // Ask the user for input
+
+        var response = prompt("How many bananas did you eat?");
+        var output = document.getElementById("output");
+        var answer = document.getElementById("answer");
+
+        // Converting the string into number
+        response = Number(response);
+        var calBanana = 89;
+        var totalCal = 0;
+        var noBananas;
+        //Loop through the defined number and display calorie count for bananas
+
+        for (var i = 1; i <= response; i++) {
+            totalCal += calBanana;
+            noBananas = i > 1 ? "bananas. You added another" : "banana. You just consumed "
+            output.innerHTML += "You ate " + i + " " + noBananas + " " + totalCal + " calories<br>";
+        }
+
+        output.innerHTML += "You just consumed " + calCount + " calories!<br>";
+
+    </script>
+</body>
+
+</html>
