@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Javascript Loops - Do while loop </title>
+</head>
+
+<body>
+    <h1 id="header">Let's count to....</h1>
+    <div id="output">Counting begins<br></div>
+    <div id="answer"></div>
+
+    <script>
+
+        // Ask the user for input
+
+        var response = prompt("Till what number do you want to count?");
+        var output = document.getElementById("output");
+        var answer = document.getElementById("answer");
+       // Converting the user input to a number
+        response = Number(response);
+
+        
+        //Looping through the numbers and displaying only even numbers
+        var x = 0;
+        do {
+          
+            if (x % 2 == 0){
+                output.innerHTML += "value of x = " + x + "<br>";
+            }
+            x++;
+           }
+        while (x < response);
+        header.innerText += response;
+        
+        output.innerHTML += "Final value of x = " + x + "<br>";
+
+
+
+
+    </script>
+</body>
+
+</html>
