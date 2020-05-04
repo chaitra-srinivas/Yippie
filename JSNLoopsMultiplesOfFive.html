@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Nested Loops - Mutliples of 5 </title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">Dynamic Table displaying multiples of 5</h1>
+    <div id="output"></div>
+    <script>
+        // Creating a html table dynamically which displays multiples of 5 and keeps adding and displaying the total
+        var output = document.getElementById("output");
+        var html = "<table>";
+            var multiFive = 0;
+            var totalMultiFive = 0;
+            for(var row=0;row<1000;row++){
+              html += "<tr>";
+                    if(row%5 === 0){
+                        totalMultiFive += row;
+                       output.innerHTML += row+ " = " + totalMultiFive + "<br>";
+                    }
+                html +="</tr>";
+            }
+            html += "</table>";
+            output.innerHTML += "Total =" + totalMultiFive;
+        </script>
+</body>
+</html>
