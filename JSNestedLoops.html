@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Nested Loops - Loop within a Loop </title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">Dynamic Table</h1>
+    <div id="output"></div>
+    <script>
+        // Creating a html table dynamically
+        var output = document.getElementById("output");
+        var html = "<table>";
+            var printCol = 0;
+            for(var row=0;row<10;row++){
+                html += "<tr>";
+                for (var col=0;col<5;col++){
+                    printCol = printCol + 1;
+                    html +="<td>Cell = "+printCol+"</td>";   
+                }
+                html +="</tr>";
+            }
+            html += "</table>";
+            output.innerHTML = html;
+    </script>
+</body>
+</html>
