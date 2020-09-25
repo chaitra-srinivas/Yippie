@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Objects and Loops - Looping through an Object </title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">Looping through an object</h1>
+    <div id="output"></div>
+    <script>
+        // Looping through an object using for loop
+        var output = document.getElementById("output");
+        var userNames = {a: "Mike", b:"John", c: "Larry"};
+
+            output.innerHTML += "Looping through an object using for loop <br>";
+            for(var x in userNames){
+                output.innerHTML += x + "=" + userNames[x] + "<br>";
+            }
+ 
+        // Looping through the document object
+
+        output.innerHTML += "Looping through the document object <br>";
+            for (var x in document){
+                output.innerHTML += x + "=" + document[x] + "<br>";
+            }
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Arrays and Loops - Looping through an array </title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">Looping through an array</h1>
+    <div id="output"></div>
+    <script>
+        // Looping through an array using for and while loops
+        var output = document.getElementById("output");
+        var userNames = ["Mike","John","Larry"];
+
+            output.innerHTML += "Using for loop <br>";
+            for(var x=0; x< userNames.length; x++){
+                output.innerHTML += userNames[x] + "<br>";
+            }
+
+            //Looping in reverse order using for loop
+
+           //var x = userNames.lenght;
+           output.innerHTML += "Looping through in reverse order <br>";
+            for(x = userNames.length -1 ; x >= 0; x--)
+            {
+                output.innerHTML += userNames[x] + "<br>";
+
+            }
+
+            // Looping through an array using for loop values
+            output.innerHTML += "Using values <br>"; 
+
+            for (value of userNames){
+                output.innerHTML += value + "<br>";
+            }
+
+
+            //Looping through arrays using While loop
+            output.innerHTML += "Using While loop <br>";
+            var arr = 0;
+            while(userNames[arr])
+            {
+                output.innerHTML += userNames[arr] + "<br>";
+                arr++;
+            }
+
+           
+        </script>
+</body>
+</html>
