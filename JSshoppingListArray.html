@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Objects and Loops - Creating a dynamic shopping list</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">Shopping List</h1>
+    <div id="output"></div>
+    <script>
+        // Prompt user for shopping list items
+
+        var output = document.getElementById("output");
+        var addItem;
+        var shoppingList = [];
+
+      // Preempt the number of items the user wants to add
+        var howManyTimes = prompt("How many items would you like to add?");
+            for(var x = 0; x < howManyTimes; x++){
+               addItem = prompt("What would you like to add?");
+               if (addItem == "no"){break;}
+               shoppingList.push(addItem);
+            }
+ 
+        // Looping through the shopping list to display the items
+
+                for(myItem in shoppingList){
+                    output.innerHTML += shoppingList[myItem] + "<br>";
+                }
+             
+
+        </script>
+</body>
+</html>
