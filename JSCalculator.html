@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">Calculator</h1>
+    <h2 id = "header2">Please input 2 numbers</h2>
+            
+            <table id="calcTable">
+                <tbody>
+                    <td>
+                        First:<input type = "text" id = "num1">
+                        Second:<input type = "text" id = "num2">
+                            <input type ="button" onClick = "addBy()" value="Add">
+                            <input type="button" onClick = "subBy()" value="Subtract">
+                            <input type="button" onClick = "multiplyBy()" value="Multiply">
+                            <input type="button" onClick = "divideBy()" value="Divide">
+                    </td>
+                 </tbody>
+            </table>
+            <div id="output"></div>
+          
+    <script>
+        var output = document.getElementById("output");
+        var numOne = document.getElementById("num1");
+        var numTwo = document.getElementById("num2");
+
+        function addBy()
+        {
+           var a = numOne.value + " + " + numTwo.value;
+           var b = Number(numTwo.value) + Number(numOne.value);
+           outputResult(a,b);
+        }
+
+        function subBy()
+        {
+           var a = numOne.value + " - " + numTwo.value;
+           var b = Number(numOne.value) - Number(numTwo.value);
+           outputResult(a,b);
+        }
+
+        function multiplyBy()
+        {
+           var a = numOne.value + " X " + numTwo.value;
+           var b = Number(numOne.value) * Number(numTwo.value);
+           outputResult(a,b);
+        }
+
+        function divideBy()
+        {
+           var a = numOne.value + " / " + numTwo.value;
+           var b = Number(numOne.value) / Number(numTwo.value);
+           outputResult(a,b);
+        }
+        function outputResult(a,b){
+            output.innerHTML += a + " " + "=" +  " " + b + "<br>";
+
+        }
+  
+    </script>
+</body>
+</html>

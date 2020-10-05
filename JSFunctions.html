@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">My first function</h1>
+        <div id="output"></div>
+      
+    <script>
+     var output = document.getElementById("output");
+        
+        // Declaring a global variable
+        var a = "Hello";
+
+        // My first function
+        function myFunction(){
+            alert("Hello world!!");
+        }
+
+        function myOutputFunction()
+        {
+            // Declaring a local variable
+            var b = a + " " + "world!";
+            return b;
+        }
+        myFunction();
+        output.innerHTML = myOutputFunction();
+
+    
+    </script>
+</body>
+</html>

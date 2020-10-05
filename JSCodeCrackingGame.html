@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body> 
+    <h1 id="header">Code Cracking Game</h1>
+    <h3>Guess the code</h3>
+    Code:
+    <input type = "text" id="code1">
+    <input type = "text" id="code2">
+    <input type = "text" id="code3">
+    <br>
+    <input type = "button" onClick="crack()" value="Try Code">
+    <br>
+    <div id="output"></div>
+          
+    <script>
+        var cCode = [];
+        var count = 0;
+        var output = document.getElementById("output");
+        var c1 = document.getElementById("code1");
+        var c2 = document.getElementById("code2");
+        var c3 = document.getElementById("code3");
+
+        // Creating a code with 3 random numeric values
+
+        for (var x=0;x < 3; x++){
+            cCode.push(Math.floor(Math.random()*9));
+        }
+        output.innerHTML += cCode;
+
+        function crack(){
+            count=0;
+
+            // Creating an array to store the guessed values by the user
+            var guess =[c1.value,c2.value,c3.value];
+
+            // Comparing the user's guess to the generated code by passing values to checkNum function
+
+            for (var x=0;x<cCode.length;x++){
+               output.innerHTML += checkNum(guess[x],cCode[x]);
+            }
+
+            if(count==3){
+                output.innerHTML += "You got it!!";
+            }
+            else 
+            {
+                output.innerHTML += "<br>";
+
+            }
+
+        }
+
+        function checkNum(a,b){
+            if(a<b){return "H";     
+            }
+            if (a>b){return "L";
+            }
+            if (a==b){
+                count++;
+                return a;
+            }
+        }
+ 
+    </script>
+</body>
+</html>

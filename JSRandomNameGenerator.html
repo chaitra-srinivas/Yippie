@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">My Random Name Generator</h1>
+            <div id="output"></div>
+            <input type ="button" onClick="clickFunction()" value="Click Me">
+    <script>
+        var output = document.getElementById("output");
+
+        var adj = ["Amazing","Beautiful","Fantastic","Gorgeous","Handsome","Spectacular","Awesome"];
+
+
+        function clickFunction(){
+            var question = prompt("What is your name?");
+            var newArrayPos = Math.floor(Math.random()*adj.length); 
+            console.log(newArrayPos);
+          
+                return  output.innerHTML = "Hello there " + adj[newArrayPos] + " " + question +  "!";  
+
+            // var newArrayPosWhole = Math.floor(newArrayPos);
+          
+        }
+    
+    </script>
+</body>
+</html>

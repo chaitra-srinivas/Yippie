@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">Functions without arguments</h1>
+         <div id="output"></div>
+          
+    <script>
+        var output = document.getElementById("output");
+        var a = myNewFunction();
+        
+        var b = myOldFunction();
+
+        function myNewFunction(para = "Hello new World! <br>")
+        {
+           output.innerHTML += para;
+           return para;
+        }
+
+        function myOldFunction(para)
+        {
+            if(typeof(para)=== "undefined"){
+                para= "Hello old World! <br>";
+            }
+            output.innerHTML += para;
+            return para;
+        }
+
+   
+    </script>
+</body>
+</html>
