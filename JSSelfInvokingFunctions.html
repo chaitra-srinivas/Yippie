@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Self Invoking Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body> 
+    <h1 id="header">Self Invoking function</h1>
+   
+    <div id="output"></div>
+          
+    <script>
+     
+       var a = "World";
+        var output = document.getElementById("output");
+        (function(){
+            var a = "Hello";
+            var b = "Yeah, It's summer!";
+            //output.innerHTML = a;
+            output.innerHTML = a + b;
+        })();
+
+        output.innerHTML += a;
+      
+ 
+    </script>
+</body>
+</html>

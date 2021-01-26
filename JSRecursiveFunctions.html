@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Recursive Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body> 
+    <h1 id="header">Secret Word Guessing Game</h1>
+   
+    <div id="output"></div>
+    <input type="button" onClick = "startGuess()" value="Start Game">
+    
+          
+    <script>
+       // var secretWord = "JavaScript";
+        var secretWord = ["Summer","Ice cream","Beach","Sand","Sunset"];
+        var secretWordLength = secretWord.length;
+
+        var output = document.getElementById("output");
+        var guessNum;
+
+        function startGuess(){
+            guessNum = Math.floor(Math.random()*secretWordLength);
+            getSecret(prompt("Guess the word"));
+        }
+       
+        function getSecret(secret){
+          
+                if(secretWord[guessNum]==secret)
+                {
+                output.innerHTML = "You are correct! The secret word is: " + secret;
+                }
+                else
+                {
+                getSecret(prompt("Guesss again?"));
+            }
+            return;
+            }
+ 
+    </script>
+</body>
+</html>
