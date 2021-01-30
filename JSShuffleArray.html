@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Recursive Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body> 
+    <h1 id="header">Secret Word Guessing Game</h1>
+   
+    <div id="output"></div>
+    <input type="button" onClick = "startGuess()" value="Start Game">
+    
+          
+    <script>
+       // var secretWord = "JavaScript";
+        var secretWord = ["Summer","Ice cream","Beach","Sand","Sunset","Waves","Blue Sky","Breeze"];
+        var output = document.getElementById("output");
+
+        function startGuess(){
+            shuffleArray(secretWord);
+            output.innerHTML += secretWord + "<br>";
+        }
+       
+        function shuffleArray(arr){
+            for (var x=arr.length-1;x>0;x--){
+                var holder = Math.floor(Math.random()*(x+1));
+                var temp = arr[x];
+                arr[x] = arr[holder];
+                arr[holder]= temp;
+            }
+            return arr;
+            }
+ 
+    </script>
+</body>
+</html>

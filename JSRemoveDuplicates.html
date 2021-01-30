@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Recursive Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body> 
+    <h1 id="header">Remove duplicates from an array</h1>
+   
+    <div id="output"></div>
+          
+    <script>
+        var myArr = ["Summer","Ice cream","Beach","Sand","Sunset","Waves","Blue Sky","Breeze", 3481,2409,191175,
+        "Beach","Sand","Sunset","Waves","Blue Sky","Breeze",101046,4951,21779,"Summer","Ice cream","Beach","Sand","Sunset","Waves","Blue Sky"];
+
+        var myCleanArr = removeDup(myArr);
+        output.innerHTML = myArr + "<br>" +"<br>" + myCleanArr;
+
+        function removeDup(arr){
+            var cleanArr = [];
+            var cleanObj = {};
+            var key = '';
+            for (var x=0;x<arr.length;x++){
+               // console.log(arr[x]);
+                cleanObj[arr[x]] = "whatever";
+            }
+           // console.log(cleanObj);
+            for(key in cleanObj){
+            //    console.log(key);
+                cleanArr.push(key);
+            }
+            return cleanArr;
+
+        }
+     //  console.log(cleanObj);
+      
+ 
+    </script>
+</body>
+</html>
