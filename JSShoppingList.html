@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Javascript dynamic shopping list</title>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Shopping list</h1>
+    <br>
+    <input type="text" id="item" onfocus="this.value=''"> <br>
+    <input type="button" id="addItem" onClick="funAddItems()" value="Add item"> <br>
+    <div id="output"></div>
+
+    <script>
+
+        var shoppingList = [];
+        function funAddItems() {
+
+            if (document.getElementById("item").value.length != 0 && document.getElementById("item").value.length !== "") {
+                var addItem = document.getElementById("item").value;
+                shoppingList.push(addItem);
+                function funDisplayItems() {
+                    var displayList = "";
+                    var output = document.getElementById("output");
+
+                    for (var x = 0; x < shoppingList.length; x++) {
+                        displayList += (x + 1) + "." + shoppingList[x] + "<br>";
+                    }
+                    output.innerHTML = displayList;
+                }
+                funDisplayItems();
+                document.getElementById("item").value = "";
+            }
+            else {
+                alert("Please add a valid item");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
