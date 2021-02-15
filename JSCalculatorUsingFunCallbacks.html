@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title> Javascript Functions</title>
+    <style>
+        td{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1 id="header">Calculator</h1>
+    <h2 id = "header2">Please input 2 numbers</h2>
+            
+            <table id="calcTable">
+                <tbody>
+                    <td>
+                        First:<input type = "text" id = "num1">
+                        Second:<input type = "text" id = "num2">
+                            <input type ="button" onClick = "addBy()" value="Add">
+                            <input type="button" onClick = "subBy()" value="Subtract">
+                            <input type="button" onClick = "multiplyBy()" value="Multiply">
+                            <input type="button" onClick = "divideBy()" value="Divide">
+                            <input type="button" onClick = "modBy()" value="Modulus">
+                    </td>
+                 </tbody>
+            </table>
+            <div id="output"></div>
+          
+    <script>
+        var output = document.getElementById("output");
+        var numOne = document.getElementById("num1");
+        var numTwo = document.getElementById("num2");
+
+
+        function addBy(){
+            displayComp(numOne.value,numTwo.value,"+",function(a,b){
+                return a + b;
+            })
+        }
+
+        function subBy(){
+            displayComp(numOne.value,numTwo.value,"-",function(a,b){
+                return a - b;
+            })
+        }
+
+        function multiplyBy(){
+            displayComp(numOne.value,numTwo.value,"X",function(a,b){
+                return a * b;
+            })
+        }
+
+        function divideBy(){
+            displayComp(numOne.value,numTwo.value,"/",function(a,b){
+                return a / b;
+            })
+        }
+
+        function modBy(){
+            displayComp(numOne.value,numTwo.value,"%",function(a,b){
+                return a % b;
+            })
+        }
+
+        function displayComp(a,b,s,computeAns){
+            var resultComp = computeAns(Number(a),Number(b));
+            output.innerHTML += a + " " + s + " " + b + " " + "=" + " " + resultComp + "<br>";
+           
+
+        }
+
+       
+        
+      
+
+
+     
+  
+    </script>
+</body>
+</html>
